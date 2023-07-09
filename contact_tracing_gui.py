@@ -8,7 +8,11 @@ class ContactTracingAppGUI:
         self.root = root
         self.root.title("COVID Contact Tracing App")
         self.contact_tracing_app = ContactTracingAppGUI()
+
 # Create labels and entry fields
+self.name_label = tk.Label(root, text=Name:)
+seld.name_entry = tk.Entry(root)
+
 # Create buttons
 # Place labels and entry fields on grid
 # Place buttons on grid
