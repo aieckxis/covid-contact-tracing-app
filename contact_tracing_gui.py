@@ -22,9 +22,20 @@ class ContactTracingAppGUI:
         # Create buttons
         self.add_button = tk.Button(root, text="Add Entry")
         self.search_button = tk.Button(root, text="Search Entry")
-        
-# Place labels and entry fields on grid
-# Place buttons on grid
+
+        # Place labels and entry fields on grid
+        self.name_label.grid(row=0, column=0, padx=10, pady=5, sticky=tk.W)
+        self.name_entry.grid(row=0, column=1, pady=10, padx=5)
+
+        self.phone_label.grid(row=1, column=0, padx=10, pady=5, sticky=tk.W)
+        self.phone_entry.grid(row=1, column=1, pady=10, padx=5)
+
+        self.date_label.grid(row=2, column=0, padx=10, pady=5, sticky=tk.W)
+        self.date_entry.grid(row=2, column=1, pady=10, padx=5)
+
+        # Place buttons on grid
+        self.add_button.grid(row=3, column=0, padx=10, pady=5)
+        self.search_button.grid(row=3, column=1, padx=10, pady=5)
 # Create the main window
 # Create and instance of contact tracing GUI
 # Run the application
