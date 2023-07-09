@@ -36,6 +36,12 @@ class ContactTracingAppGUI:
         # Place buttons on grid
         self.add_button.grid(row=3, column=0, padx=10, pady=5)
         self.search_button.grid(row=3, column=1, padx=10, pady=5)
+
 # Create the main window
+root = tk.Tk()
+
 # Create and instance of contact tracing GUI
+app = ContactTracingAppGUI(root)
+
 # Run the application
+root.mainloop()
