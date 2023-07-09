@@ -17,6 +17,18 @@ class ContactTracingApp:
             # Write the entry to the CSV file and print added successfully
             writer.writerow(name, phone, date)
             print("Entry added successfully.")
-# Read entries from CSV file and search for a matching name
-# Check if the name matches
-# Print whether the entry is found or not
+
+    # Read entries from CSV file and search for a matching name
+    def search_entry(self):
+        with open("contact_tracing.csv", "r") as file:
+            reader = csv.reader(file)
+            for row in reader:
+
+                # Check if the name matches and print whether the entry is found or not
+                if row[0] == name:
+                    print("Entry found:")
+                    print(f"Name: {row[0]}")
+                    print(f"Phone Number: {row[1]}")
+                    print(f"Date of Visit: {row[2]}")
+
+        print("Entry not found")
