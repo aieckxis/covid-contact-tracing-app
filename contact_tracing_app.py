@@ -7,10 +7,11 @@ import csv
 # Initialize ContactTracingApp class
 class ContactTracingApp:
     def __init__(self):
+        pass
 
     # Write collected information to a CSV file
     def add_entry(self):
-        with open("contact_tracing.csv", "a", newline="") as file
+        with open("contact_tracing.csv", "a", newline="") as file:
             writer = csv.writer(file)
 
             # Write the entry to the CSV file and print added successfully
