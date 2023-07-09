@@ -13,6 +13,12 @@ class ContactTracingAppGUI:
         self.name_label = tk.Label(root, text="Name: ")
         self.name_entry = tk.Entry(root)
 
+        self.phone_label = tk.Label(root, text="Phone Number: ")
+        self.phone_entry = tk.Entry(root)
+
+        self.date_label = tk.Label(root, text="Date of Visit: ")
+        self.date_entry = tk.Entry(root)
+
 # Create buttons
 # Place labels and entry fields on grid
 # Place buttons on grid
