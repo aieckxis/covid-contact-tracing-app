@@ -19,7 +19,10 @@ class ContactTracingAppGUI:
         self.date_label = tk.Label(root, text="Date of Visit: ")
         self.date_entry = tk.Entry(root)
 
-# Create buttons
+        # Create buttons
+        self.add_button = tk.Button(root, text="Add Entry")
+        self.search_button = tk.Button(root, text="Search Entry")
+        
 # Place labels and entry fields on grid
 # Place buttons on grid
 # Create the main window
