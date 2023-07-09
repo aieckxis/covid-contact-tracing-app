@@ -6,7 +6,7 @@ from contact_tracing_app import ContactTracingApp
 class ContactTracingAppGUI:
     def __init__(self):
         self.root = root
-        self.root.title(COVID Contact Tracing App)
+        self.root.title("COVID Contact Tracing App")
         self.contact_tracing_app = ContactTracingAppGUI()
 # Create labels and entry fields
 # Create buttons
