@@ -37,6 +37,34 @@ class ContactTracingAppGUI:
         self.add_button.grid(row=3, column=0, padx=10, pady=5)
         self.search_button.grid(row=3, column=1, padx=10, pady=5)
 
+
+        # Create an instance of the contact tracing app
+        self.contact_tracing = ContactTracingApp
+
+    def add_entry(self):
+        name = self.name_entry.get()
+        phone = self.phone_entry.get()
+        date = self.date_entry.get()
+
+        # Call the add_entry method from the ContactTracingApp
+        self.contact_tracing.add_entry()
+
+        self.clear_entries()
+        print("Entry added successfully.")
+
+    def search_entry(self):
+        name = self.name_entry.get()
+
+        entry = self.contact_tracing.search_entry()
+
+        if entry:
+            print("Entry found:")
+            print(f"Name: {row[0]}")
+            print(f"Phone Number: {row[1]}")
+            print(f"Date of Visit: {row[2]}")
+        else:
+            print("Entry not found")
+
 # Create the main window
 root = tk.Tk()
 
