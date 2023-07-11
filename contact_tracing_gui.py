@@ -69,10 +69,11 @@ class ContactTracingAppGUI:
         self.date_entry.delete(0, tk.END)
 
 # Create the main window
-root = tk.Tk()
+if __name__ == "__main__":
+    root = tk.Tk()
 
-# Create and instance of contact tracing GUI
-app = ContactTracingAppGUI(root)
+    # Create and instance of contact tracing GUI
+    app = ContactTracingAppGUI(root)
 
-# Run the application
-root.mainloop()
+    # Run the application
+    root.mainloop()
