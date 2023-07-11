@@ -23,5 +23,5 @@ class ContactTracingApp:
 
                 # Check if the name matches and print whether the entry is found or not
                 if row[0] == name:
-                    return row
-        return None
+                    entries.append(row)
+        return entries
