@@ -6,8 +6,6 @@ from contact_tracing_app import ContactTracingApp
 class ContactTracingAppGUI:
     def __init__(self, root):
         self.root = root
-        self.root.title("COVID Contact Tracing App")
-        self.contact_tracing_app = ContactTracingAppGUI(root)
 
         # Create labels and entry fields
         self.name_label = tk.Label(root, text="Name: ")
@@ -37,9 +35,8 @@ class ContactTracingAppGUI:
         self.add_button.grid(row=3, column=0, padx=10, pady=5)
         self.search_button.grid(row=3, column=1, padx=10, pady=5)
 
-
         # Create an instance of the contact tracing app
-        self.contact_tracing = ContactTracingApp
+        self.contact_tracing = ContactTracingApp()
 
     def add_entry(self):
         name = self.name_entry.get()
@@ -55,6 +52,7 @@ class ContactTracingAppGUI:
     def search_entry(self):
         name = self.name_entry.get()
 
+        # Call the search_entry method from the ContactTracingApp class
         entry = self.contact_tracing.search_entry(name)
 
         if entry:
