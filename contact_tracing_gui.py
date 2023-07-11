@@ -47,7 +47,7 @@ class ContactTracingAppGUI:
         date = self.date_entry.get()
 
         # Call the add_entry method from the ContactTracingApp
-        self.contact_tracing.add_entry()
+        self.contact_tracing.add_entry(name, phone, date)
 
         self.clear_entries()
         print("Entry added successfully.")
@@ -55,15 +55,20 @@ class ContactTracingAppGUI:
     def search_entry(self):
         name = self.name_entry.get()
 
-        entry = self.contact_tracing.search_entry()
+        entry = self.contact_tracing.search_entry(name)
 
         if entry:
             print("Entry found:")
-            print(f"Name: {row[0]}")
-            print(f"Phone Number: {row[1]}")
-            print(f"Date of Visit: {row[2]}")
+            print(f"Name: {entry[0]}")
+            print(f"Phone Number: {entry[1]}")
+            print(f"Date of Visit: {entry[2]}")
         else:
             print("Entry not found")
+
+    def clear_entries(self):
+        self.name_entry.delete(0, tk.END)
+        self.phone_entry.delete(0, tk.END)
+        self.date_entry.delete(0, tk.END)
 
 # Create the main window
 root = tk.Tk()
