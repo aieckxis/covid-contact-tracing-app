@@ -15,7 +15,7 @@ class ContactTracingApp:
             writer = csv.writer(file)
 
             # Write the entry to the CSV file and print added successfully
-            writer.writerow(name, phone, date)
+            writer.writerow("name", "phone", "date")
             print("Entry added successfully.")
 
     # Read entries from CSV file and search for a matching name

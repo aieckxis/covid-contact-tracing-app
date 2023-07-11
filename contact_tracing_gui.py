@@ -7,7 +7,7 @@ class ContactTracingAppGUI:
     def __init__(self, root):
         self.root = root
         self.root.title("COVID Contact Tracing App")
-        self.contact_tracing_app = ContactTracingAppGUI()
+        self.contact_tracing_app = ContactTracingAppGUI(root)
 
         # Create labels and entry fields
         self.name_label = tk.Label(root, text="Name: ")
