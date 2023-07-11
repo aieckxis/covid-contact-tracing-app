@@ -18,8 +18,8 @@ class ContactTracingAppGUI:
         self.date_entry = tk.Entry(root)
 
         # Create buttons
-        self.add_button = tk.Button(root, text="Add Entry")
-        self.search_button = tk.Button(root, text="Search Entry")
+        self.add_button = tk.Button(root, text="Add Entry", command=self.add_entry)
+        self.search_button = tk.Button(root, text="Search Entry", command=self.search_entry)
 
         # Place labels and entry fields on grid
         self.name_label.grid(row=0, column=0, padx=10, pady=5, sticky=tk.W)
@@ -57,9 +57,8 @@ class ContactTracingAppGUI:
 
         if entry:
             print("Entry found:")
-            print(f"Name: {entry[0]}")
-            print(f"Phone Number: {entry[1]}")
-            print(f"Date of Visit: {entry[2]}")
+            for item in entry:
+                print(item)
         else:
             print("Entry not found")
 
