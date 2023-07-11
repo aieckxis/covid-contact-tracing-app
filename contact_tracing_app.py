@@ -17,6 +17,7 @@ class ContactTracingApp:
 
     # Read entries from CSV file and search for a matching name
     def search_entry(self, name):
+        entries = []
         with open("contact_tracing.csv", "r") as file:
             reader = csv.reader(file)
             for row in reader:
