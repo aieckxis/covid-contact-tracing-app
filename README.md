@@ -20,3 +20,12 @@ To run the application, execute the **contact_tracing_gui.py** file. It will ope
 3. Enter your details in the respective fields.
 4. Click the **"Add Entry"** button to save the information to the file.
 5. Click the **"Search Entry"** button to find existing entries based on the name.
+
+## File Structure
+The repository contains the following files:
+- **contact_tracing_gui.py**: Implements the graphical user interface (GUI) using Tkinter.
+- **contact_tracing_app.py**: Provides the app's functionality for adding and searching entries.
+- **contact_tracing.csv**: Stores the contact tracing data in CSV format.
+
+## Contributing
+Contributions to the COVID Contact Tracing App are welcome! If you encounter any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request.
