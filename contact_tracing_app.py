@@ -10,10 +10,10 @@ class ContactTracingApp:
         pass
 
     # Write collected information to a CSV file
-    def add_entry(self, name, phone, date):
+    def add_entry(self, name, bday, gender, phone, email, address, date, result):
         with open("contact_tracing.csv", "a", newline="") as file:
             writer = csv.writer(file)
-            writer.writerow([name, phone, date])
+            writer.writerow([name, bday, gender, phone, email, address, date, result])
 
     # Read entries from CSV file and search for a matching name
     def search_entry(self, name):
